@@ -39,7 +39,6 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         vm.listData.observe(this,{
             setContent {
                 MyApp(it)
@@ -87,10 +86,7 @@ private fun OnboardingScreen(postData: List<PostData>, onContinueClicked: () -> 
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color.Black)
                 ) {
 
-                    Text(
-                        text = "CHECKOUT POST",
-                        color = Color.White
-                    )
+                    Text(text="CHECKOUT POST",color = Color.White)
                 }
                 Card(
                     backgroundColor = colorResource(id = R.color.teal_700),
